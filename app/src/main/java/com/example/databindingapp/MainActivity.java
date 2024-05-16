@@ -15,7 +15,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Car c1=new Car("BMW","2024");
+        Car c1=new Car();
         activityMainBinding= DataBindingUtil.setContentView(this,R.layout.activity_main);
         activityMainBinding.setCar(c1);
 

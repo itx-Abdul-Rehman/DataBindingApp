@@ -1,6 +1,9 @@
 package com.example.databindingapp;
 
-public class Car {
+import androidx.databinding.BaseObservable;
+import androidx.databinding.Bindable;
+
+public class Car extends BaseObservable {
 
     private String name;
     private String model;
@@ -14,12 +17,14 @@ public class Car {
         this.model = model;
     }
 
+    @Bindable
     public String getName() {
         return name;
     }
 
     public void setName(String name) {
         this.name = name;
+        notifyPropertyChanged(BR.name);
     }
 
     public String getModel() {
